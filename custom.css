@@ -1,0 +1,26 @@
+#nav1{
+	background:rgba(0,0,0,0.45);
+}
+
+.input-group{
+	width: 50px;
+}
+
+input:focus:not([readonly]) {
+	box-shadow: -5px 0px #4fc2f0;
+}
+
+input:not([readonly]) {
+	border: 0px solid #ffffff;
+	border-radius: 3px 0px 3px 3px ;
+}
+
+#searchIcon:focus {
+	box-shadow: none;
+
+}
+
+#dateTime{
+	font-style: Open Sans Light; 
+	color: #ffffff; 
+}
