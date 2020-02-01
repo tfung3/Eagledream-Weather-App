@@ -1,26 +1,36 @@
+* {
+	color: #ffffff !important;
+	font-family: "Open Sans" !important; 
+}
+
+html{
+	height: 100%;
+	top: 0;
+}
+
+body{
+	height: 100%;
+	background-image: url('background.jpg'); 
+	background-repeat: no-repeat;
+	background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    top: 0;
+}
+/*Navbar*/
 #nav1{
-	background:rgba(0,0,0,0.45);
+	background-color:rgba(0,0,0,0.45)!important;
+	font-weight: 300 !important;
+	font-size: 28px !important;
+	padding: 8px 20px 8px 1px;
 }
 
-.input-group{
-	width: 50px;
+.navbar-brand {
+	margin: 0px !important;
 }
+/*Main Panel*/
+#mainPanel {
 
-input:focus:not([readonly]) {
-	box-shadow: -5px 0px #4fc2f0;
-}
-
-input:not([readonly]) {
-	border: 0px solid #ffffff;
-	border-radius: 3px 0px 3px 3px ;
-}
-
-#searchIcon:focus {
-	box-shadow: none;
-
-}
-
-#dateTime{
-	font-style: Open Sans Light; 
-	color: #ffffff; 
 }

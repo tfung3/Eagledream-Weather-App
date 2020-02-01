@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="custom.css">
@@ -13,38 +14,47 @@
     <title>EDS Weather App</title>
   </head>
   <body>
+
     <!--Navigation Bar -->
-    <nav class="navbar sticky-top" id="nav1">
+    <nav class="navbar sticky-top d-flex w-100 justify-content-between" id="nav1">
       <!-- Logo -->
-      <a class="navbar-brand mx-auto mx-md-0" href="#">
+      <a class="navbar-brand" href="#">
         <img id="logo" src="EDT-logo.png" height="40" alt="">
       </a>
-      <!-- Search bar -->
-      <form class="navbar-form form-inline mr-auto col-12 col-sm-6 col-sm-offset-4" id="searchBar" role="search">
-        <div class="input-group ml-md-3 w-100">
-          <input class="form-control" id="searchInput" type="text" placeholder="Search..." aria-label="Search">
-          <div class="input-group-append">
-            <button type="button" class="btn" id="searchIcon"><i class="fa fa-search " aria-hidden="true"></i></button>
-          </div>
-        </div>
-      </form>
       <!-- Time and Date -->
-      <span class="navbar-text mx-auto mx-md-0">
-        <span id="dateTime"></span>
+
+      <span class="navbar-text mx-auto">
+        <span id="time"></span>
       </span>
+      <span class="navbar-text">
+        <span id="date"></span>
+      </span>
+
+
+
     </nav>
 
     <!-- Main Panel-->
-    <div class="container-fluid">
-      
+    <div class="fluid-container" id="mainPanel">
+      <div class="row">
+        <div class="col-12 col-md-3">
+          <table>
+            <th>My location</th>
+            <th id="userLocation"></th>
+          </table>
+        </div>
+      </div>
+
+
+
     </div>
     
 
 
 
 
- 
-
   <script src="main.js"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDgDvshAa8VmwLPPn2EaIoIEkojtaSFc-0&callback=initMap"></script> 
+
   </body>
 </html>
