@@ -5,7 +5,7 @@ document.getElementById("date").innerHTML = dt.getMonth() +"."+ dt.getDate() +".
 function formatAMPM(date) {
   var hours = date.getHours();
   var minutes = date.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
+  var ampm = hours >= 12 ? 'PM' : 'AM';
   hours = hours % 12;
   hours = hours ? hours : 12; // the hour '0' should be '12'
   minutes = minutes < 10 ? '0'+minutes : minutes;
@@ -14,7 +14,6 @@ function formatAMPM(date) {
 }
 
 formatAMPM(dt);
-//+" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
 
 //Geolocation
 var x = document.getElementById("userLocation");

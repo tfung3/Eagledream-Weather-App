@@ -1,60 +1,145 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="custom.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" /> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="custom.css">
 
-    <title>EDS Weather App</title>
-  </head>
-  <body>
+	<title>EDS Weather App</title>
+</head>
+<body>
 
-    <!--Navigation Bar -->
-    <nav class="navbar sticky-top d-flex w-100 justify-content-between" id="nav1">
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-        <img id="logo" src="EDT-logo.png" height="40" alt="">
-      </a>
-      <!-- Time and Date -->
+	<!--Navigation Bar -->
+	<nav class="navbar sticky-top" id="nav1">
+		<!-- Logo -->
+		<a class="navbar-brand" href="#">
+			<img id="logo" src="EDT-logo.png" height="40" alt="">
+		</a>
+		<!-- Time and Date -->
+		<span class="navbar-text">
+			<span id="time"></span>
+		</span>
+		<span class="navbar-text">
+			<span id="date"></span>
+		</span>
+	</nav>
 
-      <span class="navbar-text mx-auto">
-        <span id="time"></span>
-      </span>
-      <span class="navbar-text">
-        <span id="date"></span>
-      </span>
+	<!-- Main Panel-->
+	<div class="fluid-container" id="mainPanel">
+		<div class="row">
+			<!--Left Panel-->
+			<div class="col-12 col-md-4" id=leftPanel>
+				<table class="leftTable">
+					<tr>
+						<th>My location</th>
+						<th id="userLocation"></th>
+					</tr>
+					<tr>
+						<td></td>
+						<td><a>New York City</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Paris</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Cairo</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Hong Kong</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Buenos Aires</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>+</td>
+					</tr>
+				</table>
+			</div>
+
+			<!--Center Panel-->
+			<div class="col-12 col-md-4" id="circleDiv">
+				<div class="rounded-circle mx-auto">
+					<div class="container">
+						<div class="row">
+							<!--1st Row City Header-->
+							<div class="col" id="selectedCity">
+								New York City
+							</div>
+						</div>
+						<!--2nd Row-->
+						<div class="row centerLine">
+							<div class="col-md-3" id="lowTemp">
+								<div id="low">low</div> <br>
+								<div id="lowNum">8</div>
+							</div>
+							<div class="col-md-6" id="centerTemp">
+								16
+							</div>
+							<div class="col-md-3" id="highTemp">
+								<div id="high">high</div><br>
+								<div id="highNum">18</div>
+							</div>
+						</div>
+						<!--3rd Row-->
+						<div class="row thirdLine">
+							<div class="col-md-12 centerIconDiv">
+								<img id="weatherIcon" src="icons8-cloud-512.png" height="80" alt=""><br>
+								<div id="iconDescription">Cloudy</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Right Panel-->
+			<div class="col-12 col-md-3" id="rightPanel">
+				<table class="rightTable">
+					<tr>
+						<th>Kite Flying</th>
+						<td id="kiteFlying"></td>
+					</tr>
+					<tr>
+						<th>Jogging</th>
+						<td id="jogging"></td>
+					</tr>
+					<tr>
+						<th>Skiing</th>
+						<td id="skiing"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<!--Bottom Strip-->
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				
+			</div>
+		</div>
 
 
 
-    </nav>
 
-    <!-- Main Panel-->
-    <div class="fluid-container" id="mainPanel">
-      <div class="row">
-        <div class="col-12 col-md-3">
-          <table>
-            <th>My location</th>
-            <th id="userLocation"></th>
-          </table>
-        </div>
-      </div>
-
-
-
-    </div>
-    
+	</div>
 
 
 
 
-  <script src="main.js"></script>
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDgDvshAa8VmwLPPn2EaIoIEkojtaSFc-0&callback=initMap"></script> 
 
-  </body>
+	<script src="main.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDgDvshAa8VmwLPPn2EaIoIEkojtaSFc-0&callback=initMap"></script> 
+
+</body>
 </html>

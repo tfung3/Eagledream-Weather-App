@@ -13,24 +13,137 @@ body{
 	background-image: url('background.jpg'); 
 	background-repeat: no-repeat;
 	background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    top: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 /*Navbar*/
 #nav1{
 	background-color:rgba(0,0,0,0.45)!important;
-	font-weight: 300 !important;
-	font-size: 28px !important;
-	padding: 8px 20px 8px 1px;
 }
 
 .navbar-brand {
-	margin: 0px !important;
+	margin-right: 0px;
 }
-/*Main Panel*/
-#mainPanel {
 
+.navbar-text {
+	font-weight: 300 !important;
+	font-size: 28px !important;
+}
+
+/*Left Panel*/
+#leftPanel{
+	margin: 30px;
+}
+
+.leftTable table {
+	table-layout: fixed;
+}
+
+.leftTable th {
+	border-bottom: 1px solid #ffffff;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.leftTable th,td {
+	padding: 0px 15px 0px 5px;
+}
+
+.leftTable td {
+	font-size: 20px;
+	font-weight: 300;
+}
+
+/*td a:hover {
+	color: #ffff00 ;
+}*/
+
+/*Right Panel*/
+#rightPanel {
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+.rightTable {
+	text-align: left;
+	font-size: 20px;
+}
+
+.rightTable th {
+	font-weight: 600;
+}
+
+.rightTable td {
+	font-weight: 300;
+	padding-left: 20px;
+}
+
+/*Center Panel*/
+
+#circleDiv {
+	padding: 0;
+	text-align: center;
+}
+
+.rounded-circle {
+	border-radius: 50%;
+	width: 40vw;
+	height: 40vw ;
+	text-align: center;
+	background-color:rgba(0,0,0,0.45);
+	position: relative;
+	top: 80px;
+	left: -60px;
+}
+#selectedCity {
+	position: relative;
+	top: 65px;
+	font-size: 42px;
+	font-weight: 600;
+}
+
+.centerLine {
+	position: relative;
+	top: 80px;
+}
+
+#high, #low {
+	padding: 0px;
+}
+
+br {
+  display: block; 
+  content: "";
+  margin-bottom: 0; 
+}
+
+#lowTemp, #highTemp {
+	font-weight: 300;
+	font-size: 28px;
+	padding: 0px;
+	position: relative;
+	top: 10px;
+}
+
+#centerTemp {
+	font-size: 176px;
+	font-weight: 600;
+	padding: 0px;
+	position: relative;
+	top: -65px;
+	height: ;
+}
+
+.thirdLine {
+	position: relative;
+	top: -45px;
+}
+
+#iconDescription {
+	font-weight: 300;
+	font-size: 36px;
+	position: relative;
+	top: -15px;
 }
