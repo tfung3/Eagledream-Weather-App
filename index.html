@@ -7,7 +7,7 @@
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" type="text/css" href="reset.css">
-	<!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" /> -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="custom.css">
@@ -18,26 +18,25 @@
 
 	<!--Navigation Bar -->
 		<nav class="navbar" id="nav1">
-			<!-- Logo -->
-			<div class="container-fluid">
-			<a class="navbar-brand" href="#">
-				<img id="logo" src="EDT-logo.png" height="40" alt="">
-			</a>
-			<!-- Time and Date -->
-			<span class="navbar-text">
-				<span id="time"></span>
-			</span>
-			<span class="navbar-text">
-				<span id="date"></span>
-			</span>
-		</div>
+  			<!-- Logo -->
+            <div class="col-4">
+  			<a class="navbar-brand" href="#">
+  				<img id="logo" src="EDT-logo.png" height="40" alt="">
+  			</a>
+      </div>
+  			<!-- Time and Date -->
+  			<div class="navbar-text col-4 text-center">
+  				<div id="time"></div>
+  			</div>
+  			<div class="navbar-text col-4 text-right">
+  				<div id="date"></div>
 		</nav>
 
 	<!-- Main Panel-->
 	<div class="fluid-container" id="mainPanel">
 		<div class="row">
 			<!--Left Panel-->
-			<div class="col-12 col-lg-4 col-xl-3 ml-lg-4 col-offset-xl-1 mt-4" id=leftPanel>
+			<div class="col-12 col-lg-4 col-xl-3 mt-4" id="leftPanel">
 				<table class="leftTable">
 					<tr>
 						<th>My location</th>
@@ -71,8 +70,8 @@
 			</div>
 
 			<!--Center Panel-->
-			<div class="col-12 col-md-4" id="circleDiv">
-				<div class="rounded-circle mx-auto">
+			<div class="col-12 col-lg-4 col-xl-4 offset-xl-1" id="circleDiv">
+				<div class="rounded-circle mx-auto ">
 					<div class="container">
 						<div class="row">
 							<!--1st Row City Header-->
@@ -106,7 +105,7 @@
 			</div>
 
 			<!--Right Panel-->
-			<div class="col-12 col-lg-3 ml-lg-5 mt-4" id="rightPanel">
+			<div class="col-12 col-lg-3 col-xl-4 mt-4 ml-xl-0" id="rightPanel">
 				<table class="rightTable">
 					<tr>
 						<th>Kite Flying</th>
