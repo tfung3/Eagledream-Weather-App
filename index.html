@@ -17,25 +17,27 @@
 <body>
 
 	<!--Navigation Bar -->
-	<nav class="navbar sticky-top" id="nav1">
-		<!-- Logo -->
-		<a class="navbar-brand" href="#">
-			<img id="logo" src="EDT-logo.png" height="40" alt="">
-		</a>
-		<!-- Time and Date -->
-		<span class="navbar-text">
-			<span id="time"></span>
-		</span>
-		<span class="navbar-text">
-			<span id="date"></span>
-		</span>
-	</nav>
+		<nav class="navbar" id="nav1">
+			<!-- Logo -->
+			<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img id="logo" src="EDT-logo.png" height="40" alt="">
+			</a>
+			<!-- Time and Date -->
+			<span class="navbar-text">
+				<span id="time"></span>
+			</span>
+			<span class="navbar-text">
+				<span id="date"></span>
+			</span>
+		</div>
+		</nav>
 
 	<!-- Main Panel-->
 	<div class="fluid-container" id="mainPanel">
 		<div class="row">
 			<!--Left Panel-->
-			<div class="col-12 col-md-4" id=leftPanel>
+			<div class="col-12 col-lg-4 col-xl-3 ml-lg-4 col-offset-xl-1 mt-4" id=leftPanel>
 				<table class="leftTable">
 					<tr>
 						<th>My location</th>
@@ -104,7 +106,7 @@
 			</div>
 
 			<!--Right Panel-->
-			<div class="col-12 col-md-3" id="rightPanel">
+			<div class="col-12 col-lg-3 ml-lg-5 mt-4" id="rightPanel">
 				<table class="rightTable">
 					<tr>
 						<th>Kite Flying</th>

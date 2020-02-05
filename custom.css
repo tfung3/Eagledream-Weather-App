@@ -3,24 +3,28 @@
 	font-family: "Open Sans" !important; 
 }
 
-html{
-	height: 100%;
-	top: 0;
+html, body { 
+margin:0;
+padding:0;
+width:100%;
+height:100%;
+overflow: auto;
 }
 
-body{
-	height: 100%;
-	background-image: url('background.jpg'); 
-	background-repeat: no-repeat;
-	background-position: center;
-  -webkit-background-size: cover;
+body {
+	background: url("background.jpg") no-repeat fixed;
+	background-size: cover;
+	background-position: center center;
+	background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
+
 /*Navbar*/
 #nav1{
 	background-color:rgba(0,0,0,0.45)!important;
+	width: 100%;
 }
 
 .navbar-brand {
@@ -33,9 +37,6 @@ body{
 }
 
 /*Left Panel*/
-#leftPanel{
-	margin: 30px;
-}
 
 .leftTable table {
 	table-layout: fixed;
@@ -60,26 +61,6 @@ body{
 	color: #ffff00 ;
 }*/
 
-/*Right Panel*/
-#rightPanel {
-	margin-top: 30px;
-	margin-left: 20px;
-}
-
-.rightTable {
-	text-align: left;
-	font-size: 20px;
-}
-
-.rightTable th {
-	font-weight: 600;
-}
-
-.rightTable td {
-	font-weight: 300;
-	padding-left: 20px;
-}
-
 /*Center Panel*/
 
 #circleDiv {
@@ -89,12 +70,12 @@ body{
 
 .rounded-circle {
 	border-radius: 50%;
-	width: 40vw;
-	height: 40vw ;
+	width: 450px;
+	height: 450px ;
 	text-align: center;
 	background-color:rgba(0,0,0,0.45);
 	position: relative;
-	top: 80px;
+	top: 90px;
 	left: -60px;
 }
 #selectedCity {
@@ -146,4 +127,19 @@ br {
 	font-size: 36px;
 	position: relative;
 	top: -15px;
+}
+
+/*Right Panel*/
+.rightTable {
+	text-align: left;
+	font-size: 20px;
+}
+
+.rightTable th {
+	font-weight: 600;
+}
+
+.rightTable td {
+	font-weight: 300;
+	padding-left: 20px;
 }
