@@ -44,27 +44,27 @@
 					</tr>
 					<tr>
 						<td></td>
-						<td><a>New York City</a></td>
+						<td><button class="btn btn-link city-weather" id="nyc" data-lat="40.7128" data-long="74.0060">New York City</button></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>Paris</td>
+						<td><button class="btn btn-link city-weather" id="paris" data-lat="48.8566" data-long="2.3522">Paris</button></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>Cairo</td>
+						<td><button class="btn btn-link city-weather" id="Cairo" data-lat="30.0444" data-long="31.2357">Cairo</button></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>Hong Kong</td>
+						<td><button class="btn btn-link city-weather" id="hk" data-lat="22.3193" data-long="114.1694">Hong Kong</button></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>Buenos Aires</td>
+						<td><button class="btn btn-link city-weather" id="ba" data-lat="34.6037" data-long="58.3816">Buenos Aires</button></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>+</td>
+						<td><button class="btn btn-link" id="plus" onclick="search()">+</button></td>
 					</tr>
 				</table>
 			</div>
@@ -76,28 +76,26 @@
 						<div class="row">
 							<!--1st Row City Header-->
 							<div class="col" id="selectedCity">
-								New York City
 							</div>
 						</div>
 						<!--2nd Row-->
 						<div class="row centerLine">
 							<div class="col-md-3" id="lowTemp">
 								<div id="low">low</div> <br>
-								<div id="lowNum">8</div>
+								<div id="lowNum"></div>
 							</div>
 							<div class="col-md-6" id="centerTemp">
-								16
 							</div>
 							<div class="col-md-3" id="highTemp">
 								<div id="high">high</div><br>
-								<div id="highNum">18</div>
+								<div id="highNum"></div>
 							</div>
 						</div>
 						<!--3rd Row-->
 						<div class="row thirdLine">
 							<div class="col-md-12 centerIconDiv">
-								<img id="weatherIcon" src="icons8-cloud-512.png" height="80" alt=""><br>
-								<div id="iconDescription">Cloudy</div>
+								<img id="weatherIcon" src="" height="80" alt=""><br>
+								<div id="iconDescription"></div>
 							</div>
 						</div>
 					</div>
@@ -109,15 +107,15 @@
 				<table class="rightTable">
 					<tr>
 						<th>Kite Flying</th>
-						<td id="kiteFlying"></td>
+						<td><span id="kiteFlying"></span> km/hr</td>
 					</tr>
 					<tr>
 						<th>Jogging</th>
-						<td id="jogging"></td>
+						<td><span id="jog_high_temp"></span>, <span id="jogging"></span></td>
 					</tr>
 					<tr>
 						<th>Skiing</th>
-						<td id="skiing"></td>
+						<td><span id="skiing"></span> cm</td>
 					</tr>
 				</table>
 			</div>
@@ -130,7 +128,7 @@
 				<table class="bottomTable mx-auto">
           <tr class="imgRow">
             <td>
-              <img id="twoImage" src="icons8-cloud-512.png">
+              <img id="twoImage" src="">
             </td>
             <td>
               <img id="threeImage" src="">
@@ -153,7 +151,7 @@
           </tr>
           <tr class="tempRow">
             <td>
-              <div id="twoTemp">12</div>
+              <div id="twoTemp"></div>
             </td>
             <td>
               <div id="threeTemp"></div>
@@ -171,41 +169,41 @@
               <div id="sevenTemp"></div>
             </td>
             <td>
-              <div id="eightTrmp"></div>
+              <div id="AteTemp"></div>
             </td>
           </tr>
           <tr class="timeRow">
             <td>
-              <div id="twoTime">2PM</div>
+              <div id="twoTime"></div>
             </td>
             <td>
-              <div id="threeTime">3PM</div>
+              <div id="threeTime"></div>
             </td>
             <td>
-              <div id="fourTime">4PM</div>
+              <div id="fourTime"></div>
             </td>
             <td>
-              <div id="fiveTime">5PM</div>
+              <div id="fiveTime"></div>
             </td>
             <td>
-              <div id="sixTime">6PM</div>
+              <div id="sixTime"></div>
             </td>
             <td>
-              <div id="sevenTime">7PM</div>
+              <div id="sevenTime"></div>
             </td>
             <td>
-              <div id="eightTime">8PM</div>
+              <div id="eightTime"></div>
             </td>
           </tr>
         </table>
 			</div>
       <div class="col-lg-2 offset-lg-0 offset-xl-1 buttonDiv">
-        <button class="btn btn-link" id="unitSwitch">
+        <div class="text-right" id="unitSwitch">
           <div class="buttonText">
-            <span id="metric">metric/ </span> <span id="imperial">imperial</span><br>
-            <span id="C"> C/ </span> <span id="F">F</span>
+            <span type="c" id="metric" onclick="change_all('c');">metric/ </span> <span type="f" id="imperial" onclick="change_all('f');">imperial</span><br>
+            <span type="c" id="C" onclick="change_all('c');"> C/ </span> <span type="f" id="F" onclick="change_all('f');">F</span>
           </div>
-        </button>
+        </div>
       </div>
 		</div>
 
@@ -219,7 +217,7 @@
 
 
 	<script src="main.js"></script>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDgDvshAa8VmwLPPn2EaIoIEkojtaSFc-0&callback=initMap"></script> 
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDgDvshAa8VmwLPPn2EaIoIEkojtaSFc-0&callback=loader"></script> 
 
 </body>
 </html>
